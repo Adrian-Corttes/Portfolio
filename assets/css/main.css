@@ -29,7 +29,7 @@ body::before{
    z-index: -1;
 }
 
-@media (min-width: 1024px){
+@media screen and (min-width: 1024px){
    body::before{
       background-attachment: fixed;
    }
@@ -45,4 +45,66 @@ a:hover{
 }
 h1, h2, h3, h4, h5, h6 {
    font-family: "Raleway", sans-serif;
+}
+
+/*======== Header ========*/
+.header{
+   transition: ease-in-out 0.3s;
+   position: relative;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   z-index: 997;
+   overflow-y: auto;
+}
+.header *{
+   transition: ease-in-out 0.3s;
+}
+.header__title{
+   font-size: 48px;
+   margin: 0;
+   padding: 0;
+   line-height: 1;
+   color: var(--white);
+   font-weight: 700;
+   font-family: "Poppins", sans-serif;
+}
+.header h1 a:hover {
+   color: #fff;
+   line-height: 1;
+   display: inline-block;
+ }
+.header__title--span{
+   display: block;
+   margin-bottom: 10px;
+}
+.header__subtitle{
+   font-size: 24px;
+   margin-top: 10px;
+   color: rgba(255, 255, 255, 0.8);
+}
+.header__subtitle--span{
+   color: var(--white);
+   border-bottom: 2px solid var(--color-link);
+}
+/*======== Social Links ========*/
+.social-links{
+   margin-top: 40px;
+   display: flex;
+}
+.social-links a{
+   font-size: 16px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(255, 255, 255, 0.1);
+   color: var(--white);
+   line-height: 1;
+   margin-right: 8px;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+}
+.social-links a:hover{
+   background: var(--color-link);
 }
