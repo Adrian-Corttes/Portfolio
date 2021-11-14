@@ -1,0 +1,48 @@
+/*======== Variables css ========*/
+:root{
+   /**Colors**/
+   --black: #040404;
+   --white: #fff;
+   --color-link: #ba49e7;
+}
+/*======== Base ========*/
+body{
+   font-family: "Open Sans", sans-serif;
+   background-color: var(--black);
+   color: var(--white);
+   position: relative;
+   background: transparent;
+}
+body::before{
+   content: "";
+   position: fixed;
+   background: var(--black) url('../img/hero.jpg') top right no-repeat;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+   left: 0;
+   right: 0;
+   top: 0;
+   height: 0;
+   height: 100vh;
+   z-index: -1;
+}
+
+@media (min-width: 1024px){
+   body::before{
+      background-attachment: fixed;
+   }
+} 
+
+a {
+   color: var(--color-link);
+   text-decoration: none;
+}
+a:hover{
+   color: var(--color-link);
+   text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+   font-family: "Raleway", sans-serif;
+}
