@@ -30,7 +30,7 @@ body::before{
 }
 
 /*======== Media queries ========*/ 
-@media screen and (min-width: 1024px){
+@media (min-width: 1024px){
    body::before{
       background-attachment: fixed;
    }
@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*======== Media queries ========*/
-@media screen and (max-width: 992px){
+@media (max-width: 992px){
    .header__title{
       font-size: 36px;
    }
@@ -231,4 +231,66 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
    color: #fff;
+ }
+/*======== Mobil Navigation ========*/
+.mobile-nav-toggle{
+    color: var(--white);
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+    position: fixed;
+    right: 15px;
+    top: 15px;
+}
+
+@media (max-width: 991px) {
+   .mobile-nav-toggle {
+     display: block;
+   }
+   .navbar ul {
+     display: none;
+   }
+}
+.navbar-mobile {
+   position: fixed;
+   overflow: hidden;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   background: rgba(0, 0, 0, 0.9);
+   transition: 0.3s;
+   z-index: 999;
+   margin-top: 0;
+}
+.navbar-mobile .mobile-nav-toggle {
+   position: absolute;
+   top: 15px;
+   right: 15px;
+}
+.navbar-mobile ul {
+   display: block;
+   position: absolute;
+   top: 55px;
+   right: 15px;
+   bottom: 45px;
+   left: 15px;
+   padding: 10px 0;
+   overflow-y: auto;
+   transition: 0.3s;
+   border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.navbar-mobile li {
+   padding: 12px 20px;
+ }
+ 
+ .navbar-mobile li + li {
+   margin: 0;
+ }
+ 
+ .navbar-mobile a {
+   font-size: 16px;
+   position: relative;
  }
