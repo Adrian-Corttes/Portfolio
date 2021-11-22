@@ -354,3 +354,32 @@ section .container {
   font-family: "Poppins", sans-serif;
   color: #fff;
 }
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about-me .content H3{
+   font-weight: 700;
+   font-size: 26px;
+   color: var(--color-link);
+}
+.about-me .content ul {
+   list-style: none;
+   padding: 0;
+}
+.about-me .content ul li {
+   margin-bottom: 20px;
+   display: flex;
+   align-items: center;
+}
+.about-me .content ul strong {
+   margin-right: 10px;
+}
+.about-me .content ul i {
+   font-size: 16px;
+   margin-right: 5px;
+   color: #ba49e7;
+   line-height: 0;
+}
+.about-me .content p:last-child {
+   margin-bottom: 0;
+}
