@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
    }
 }
 
-/* Header Top */
+/*! Header Top */
 .header.header-top {
    height: 80px;
    position: fixed;
@@ -382,4 +382,77 @@ section .container {
 }
 .about-me .content p:last-child {
    margin-bottom: 0;
+}
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+.skills-container{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   grid-gap: 1rem;
+   padding: 1rem 80px;
+   font-size: 1.2rem;
+}
+.kills-box{
+   padding: 1rem;
+   color: #ddd;
+   cursor: pointer;
+}
+.skill-title{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 0.5rem;
+   margin-bottom: 0.5rem;
+   position: relative;
+}
+.skill-title h3{
+   margin: 0.5rem 0 0 0;
+   font-size: 20px;
+   cursor: pointer;
+}
+.skill-title:after{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   right: 50%;
+   width: 0;
+   height: 2px;
+   border-radius: 2px 0 0 2px;
+   background-color: var(--color-link);
+   transition: .5s;
+}
+.skill-title:before{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   width: 0;
+   height: 2px;
+   border-radius: 0 2px 2px 0;
+   background-color: var(--color-link);
+   transition: .5s;
+}
+.skill-title:hover:after{
+   width: 35px;
+}
+.skill-title:hover:before{
+   width: 35px;
+}
+.skill-title:hover .img{
+   transform: translateY(-10px);
+}
+.img{
+   width: 50px;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 500px){
+   .skills-container{
+      grid-template-columns: repeat(3,1fr);
+      padding: 2rem 50px;
+   }
 }
