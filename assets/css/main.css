@@ -393,8 +393,11 @@ section .container {
    align-items: center;
    text-align: center;
    grid-gap: 1rem;
-   padding: 1rem 80px;
+   padding: 0 80px 0 80px;
    font-size: 1.2rem;
+}
+.title-skills h2{
+   margin-bottom: 0;
 }
 .kills-box{
    padding: 1rem;
@@ -445,6 +448,16 @@ section .container {
 .skill-title:hover .img{
    transform: translateY(-10px);
 }
+/* .skill-img{
+   width: 90px;
+   height: 90px;
+   position: relative;
+   border-radius: 45px;
+   display: flex;
+   background: rgba(255, 255, 255, 0.08);
+   justify-content: center;
+   text-align: center;
+} */
 .img{
    width: 50px;
    cursor: pointer;
@@ -455,4 +468,31 @@ section .container {
       grid-template-columns: repeat(3,1fr);
       padding: 2rem 50px;
    }
+}
+/*--------------------------------------------------------------
+# Interests
+--------------------------------------------------------------*/
+.interests .icon-box {
+   display: flex;
+   align-items: center;
+   padding: 20px;
+   background: rgba(255, 255, 255, 0.08);
+   transition: ease-in-out 0.3s;
+}
+.interests .icon-box i {
+   font-size: 32px;
+   padding-right: 10px;
+   line-height: 1;
+}
+.interests .icon-box h3 {
+   font-weight: 700;
+   margin: 0;
+   padding: 0;
+   line-height: 1;
+   font-size: 16px;
+   color: #fff;
+}
+.interests .icon-box:hover {
+   background: rgba(255, 255, 255, 0.12);
+   cursor: pointer;
 }
