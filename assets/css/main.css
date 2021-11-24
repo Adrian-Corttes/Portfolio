@@ -24,7 +24,6 @@ body::before{
    left: 0;
    right: 0;
    top: 0;
-   height: 0;
    height: 100vh;
    z-index: -1;
 }
@@ -89,6 +88,10 @@ h1, h2, h3, h4, h5, h6 {
    color: var(--white);
    border-bottom: 2px solid var(--color-link);
 }
+.header img {
+   padding: 0;
+   margin: 0;
+}
 /*======== Social Links ========*/
 .social-links{
    margin-top: 40px;
@@ -130,10 +133,11 @@ h1, h2, h3, h4, h5, h6 {
    }
 }
 
-/*! Header Top */
+/* Header Top */
 .header.header-top {
-   height: 80px;
+   height: 70px;
    position: fixed;
+   margin: 0 60px 0 60px;
    left: 0;
    top: 0;
    right: 0;
@@ -144,14 +148,15 @@ h1, h2, h3, h4, h5, h6 {
    display: none;
 }
  
-.header.header-top h1 {
+.header.header-top .header__title{
    margin-right: auto;
-   font-size: 36px;
+   font-size: 30px;
 }
  
 .header.header-top .container {
    display: flex;
    align-items: center;
+   justify-content: space-between;
 }
  
 .header.header-top .navbar {
@@ -220,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
    height: 2px;
    bottom: -4px;
    left: 0;
-   background-color: #ba49e7;
+   background-color:var(--color-link);
    visibility: hidden;
    width: 0px;
    transition: all 0.3s ease-in-out 0s;
@@ -300,15 +305,15 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 section{
    overflow: hidden;
-   /* position: absolute; */
+   position: absolute;
    width: 100%;
    top: 140px;
    bottom: 100%;
-   /* opacity: 0; */
+   opacity: 0;
    transition: ease-in-out 0.4s;
    z-index: 2;
 }
-section .section-show {
+section.section-show {
    top: 100px;
    bottom: auto;
    opacity: 1;
@@ -357,7 +362,7 @@ section .container {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about-me .content H3{
+.about-me .content h3{
    font-weight: 700;
    font-size: 26px;
    color: var(--color-link);
@@ -377,7 +382,7 @@ section .container {
 .about-me .content ul i {
    font-size: 16px;
    margin-right: 5px;
-   color: #ba49e7;
+   color: var(--color-link);
    line-height: 0;
 }
 .about-me .content p:last-child {
