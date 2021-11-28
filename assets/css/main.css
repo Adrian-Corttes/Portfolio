@@ -27,7 +27,21 @@ body::before{
    height: 100vh;
    z-index: -1;
 }
-
+html{
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 2rem ;
+}
+html::-webkit-scrollbar{
+   width: 0.3rem;
+}
+html::-webkit-scrollbar-track{
+   background: black;
+}
+html::-webkit-scrollbar-thumb{
+   background-color: var(--color-link);
+   border-radius: 5rem;
+}
 /*======== Media queries ========*/ 
 @media (min-width: 1024px){
    body::before{
@@ -132,13 +146,12 @@ h1, h2, h3, h4, h5, h6 {
 .header.header-top {
    height: 70px;
    position: fixed;
-   margin: 0 60px 0 60px;
    left: 0;
    top: 0;
    right: 0;
    background: rgba(0, 0, 0, 0.9);
 }
- 
+
 .header.header-top .social-links, #header.header-top h2 {
    display: none;
 }
@@ -157,23 +170,30 @@ h1, h2, h3, h4, h5, h6 {
 .header.header-top .navbar {
    margin: 0;
 }
- 
+ @media (max-width: 1200px) {
+   .greeting{
+      display: none;
+   }
+ }
 @media (max-width: 768px) {
    .header.header-top {
      height: 60px;
      margin: auto;
    }
    .web-dev{
-      font-size: 18px;
+      font-size: 15px;
    }
    .header.header-top h1 {
      font-size: 26px;
    }
+   .greeting{
+      display: none;
+   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
    .header.header-top {
-     height: 83px;
+     height: 80px;
      margin: auto;
    }
    .web-dev{
@@ -181,6 +201,9 @@ h1, h2, h3, h4, h5, h6 {
    }
    .header.header-top h1 {
      font-size: 10px;
+   }
+   .greeting{
+      display: none;
    }
 }
  
@@ -525,22 +548,22 @@ section .container {
    display: flex;
 }
 /*btn curriculum*/
-.curriculum{
-   display: flex;
-   align-items: flex-start;
-   
-}
 .btn-curriculum{
-   position: relative;
-   left: 500px;
+   /* position: relative; */
    color: var(--white);
    background: var(--color-link);
-   padding: 0.5rem;
+   padding: 0.3rem;
    border-radius: 4px;
+   font-size: 12px;
+}
+.btn-curriculum i{
+   font-size: 13px;
+   margin-right: 3px;
 }
 .btn-curriculum:hover{
    color: var(--black);
 }
+
 /*end btn-curriculun*/
 .resume .resume-item {
   padding: 0 0 20px 20px;
@@ -853,7 +876,14 @@ section .container {
    color: #fff;
    z-index: 999999;
  }
- 
+ .download{
+    display: block;
+    font-size: 11px;
+ }
+ .download i{
+    margin-left: 2px;
+    font-size: 12px;
+ }
  @media (max-width: 992px) {
    .credits {
      text-align: center;
