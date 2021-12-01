@@ -170,11 +170,7 @@ h1, h2, h3, h4, h5, h6 {
 .header.header-top .navbar {
    margin: 0;
 }
- @media (max-width: 1200px) {
-   .greeting{
-      display: none;
-   }
- }
+
 @media (max-width: 768px) {
    .header.header-top {
      height: 60px;
@@ -186,9 +182,7 @@ h1, h2, h3, h4, h5, h6 {
    .header.header-top h1 {
      font-size: 26px;
    }
-   .greeting{
-      display: none;
-   }
+ 
 }
 
 @media (max-width: 450px) {
